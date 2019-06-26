@@ -34,8 +34,8 @@ public class ArticleDaoImpl implements ArticleDao {
   }
 
   @Override
-  public void delete(ArticleDto articleDto) throws Exception {
-    sqlSession.delete(NAMESPACE + ".delete", articleDto);
+  public void delete(Integer articleNo) throws Exception {
+    sqlSession.delete(NAMESPACE + ".delete", articleNo);
   }
 
   @Override

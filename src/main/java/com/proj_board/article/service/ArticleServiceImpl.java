@@ -18,26 +18,26 @@ public class ArticleServiceImpl implements ArticleService {
 
   @Override
   public void create(ArticleDto articleDto) throws Exception {
-
+    articleDao.create(articleDto);
   }
 
   @Override
   public ArticleDto read(Integer articleNo) throws Exception {
-    return null;
+    return articleDao.read(articleNo);
   }
 
   @Override
   public void update(ArticleDto articleDto) throws Exception {
-
+    articleDao.update(articleDto);
   }
 
   @Override
-  public void delete(ArticleDto articleDto) throws Exception {
-
+  public void delete(Integer articleNo) throws Exception {
+    articleDao.delete(articleNo);
   }
 
   @Override
   public List<ArticleDto> listAll() throws Exception {
-    return null;
+    return articleDao.listAll();
   }
 }

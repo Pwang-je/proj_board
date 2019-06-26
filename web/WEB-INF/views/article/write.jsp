@@ -31,9 +31,37 @@
         <!-- Main content -->
         <section class="content container-fluid">
 
-            <!--------------------------
-              | Your Page Content Here |
-              -------------------------->
+            <div class="col-lg-12">
+                <form action="${path}/article/write" role="form" id="writeForm" method="post">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">게시글 작성</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="title">제목</label>
+                                <input class="form-control" id="title" name="title" placeholder="제목을 입력해주세요.">
+                            </div>
+                            <div class="form-group">
+                                <label for="content">내용</label>
+                                <textarea name="content" id="content" rows="30" placeholder="내용을 입력해주세요."
+                                          class="form-control" style="resize: none;"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="writer">작성자</label>
+                                <input class="form-control" id="writer" name="writer">
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <button type="button" class="btn btn-primary"><i class="fa fa-list"></i>목록</button>
+                            <div class="pull-right">
+                                <button class="btn btn-warning" type="reset"><i class="fa fa-reply"></i>초기화</button>
+                                <button class="btn btn-success" type="submit"><i class="fa fa-save"></i>저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
         </section>
         <!-- /.content -->
