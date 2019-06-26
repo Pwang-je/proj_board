@@ -45,6 +45,10 @@
 </div>
 <!-- ./wrapper -->
 
-<%@include file="WEB-INF/views/include/plugin_js.jsp"%>
+<%--<%@include file="WEB-INF/views/include/plugin_js.jsp"%>--%>
+<script src="resources/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="resources/dist/js/adminlte.min.js"></script>
 </body>
 </html>
