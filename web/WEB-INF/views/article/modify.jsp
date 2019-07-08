@@ -31,9 +31,38 @@
         <!-- Main content -->
         <section class="content container-fluid">
 
-            <!--------------------------
-              | Your Page Content Here |
-              -------------------------->
+            <div class="col-lg-12">
+                <form action="${path}/article/modify" role="form" id="writeForm" method="post">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">게시글 작성</h3>
+                        </div>
+                        <div class="box-body">
+                            <input type="hidden" name="articleNo" value="${article.articleNo}">
+                            <div class="form-group">
+                                <label for="title">제목</label>
+                                <input class="form-control" id="title" name="title" placeholder="제목을 입력해 주세요.">
+                            </div>
+                            <div class="form-group">
+                                <label for="content">내용</label>
+                                <textarea name="content" id="content" rows="30" placeholder="내용을 입력해 주세요." style="resize: none;"
+                                          class="form-control">${article.content}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="writer">작성자</label>
+                                <input class="form-control" id="writer" name="writer" value="${article.writer}" readonly>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <button type="button" class="btn btn-primary"><i class="fa fa-list"></i>목록</button>
+                            <div class="pull-right">
+                                <button class="btn btn-warning cancelBtn"><i class="fa fa-trash"></i>취소</button>
+                                <button class="btn btn-success modBtn"><i class="fa fa-save"></i>수정 저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
         </section>
         <!-- /.content -->
@@ -46,5 +75,22 @@
 <!-- ./wrapper -->
 
 <%@include file="../include/plugin_js.jsp"%>
+<!-- 수정 페이지 하단 버튼 제어용 -->
+<script>
+    $(document).ready(function () {
+      var formObj = $("form[role='form']");
+      console.log(formObj);
+
+      $(".modBtn").on("click", function () {
+        formObj.submit();
+      });
+      $(".cancelBtn").on("click", function () {
+        history.go(-1);
+      });
+      $(".listBtn").on("click", function ()  {
+        self.location = "/article/list"
+      });
+    })
+</script>
 </body>
 </html>
