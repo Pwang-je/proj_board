@@ -10,5 +10,10 @@ public interface ArticleDao {
   void update(ArticleDto articleDto) throws Exception;
   void delete(Integer articleNo) throws Exception;
   List<ArticleDto> listAll() throws Exception;
-  
+
+  // 페이징 처리와 관련된 메서드 추가
+  List<ArticleDto> listPaging(int page) throws Exception;
+
 }
+
+

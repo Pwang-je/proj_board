@@ -43,4 +43,15 @@ public class ArticleDaoImpl implements ArticleDao {
     return sqlSession.selectList(NAMESPACE + ".listAll");
   }
 
+  // 페이징 처리를 위한 추상 메서드.
+  // 파라미터 page 값이 0보다 작은 음수값이 들어올 수 없는 조건문.
+  @Override
+  public List<ArticleDto> listPaging(int page) throws Exception {
+    if (page <= 0) {
+      page = -1;
+    }
+    page = (page - 1) * 10;
+    return sqlSession.selectList(NAMESPACE + ".listPaging", page);
+  }
+
 }
