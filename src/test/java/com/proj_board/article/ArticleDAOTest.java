@@ -2,7 +2,6 @@ package com.proj_board.article;
 
 import com.proj_board.article.domain.ArticleDto;
 import com.proj_board.article.persistance.ArticleDao;
-//import java.util.logging.Logger;
 import java.util.List;
 import org.slf4j.Logger;
 import javax.inject.Inject;
@@ -16,7 +15,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = {"file:web/WEB-INF/spring-config/applicationContext.xml"})
 public class ArticleDAOTest {
 
-//  private static final Logger logger = (Logger) LoggerFactory.getLogger(ArticleDAOTest.class);
   private static final Logger logger = LoggerFactory.getLogger(ArticleDAOTest.class);
 
   @Inject

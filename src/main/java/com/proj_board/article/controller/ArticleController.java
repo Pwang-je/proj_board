@@ -2,8 +2,8 @@ package com.proj_board.article.controller;
 
 import com.proj_board.article.domain.ArticleDto;
 import com.proj_board.article.service.ArticleService;
-import java.util.logging.Logger;
 import javax.inject.Inject;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/article")
 public class ArticleController {
 
-  private static final Logger logger = (Logger) LoggerFactory.getLogger(ArticleController.class);
+//  private static final Logger logger = (Logger) LoggerFactory.getLogger(ArticleController.class);
+  private static final Logger logger = LoggerFactory.getLogger(ArticleController.class);
 
   private final ArticleService articleService;
 

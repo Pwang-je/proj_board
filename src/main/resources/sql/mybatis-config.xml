@@ -4,7 +4,10 @@
     "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+
   <typeAliases>
-    <package name="com.proj_board"/>
+    <typeAlias type="com.proj_board.article.domain.ArticleDto" alias="ArticleDto" />
+    <!--<package name="com.proj_board.article.domain.ArticleDto" alias="ArticleDto"/>-->
   </typeAliases>
+
 </configuration>
